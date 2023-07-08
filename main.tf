@@ -53,3 +53,17 @@ module "AppService" {
     location                = module.ResourceGroup.rg_location_out     
 }
 
+module "AKS" {
+    source                  = "./aks"
+    virtual_network-name    = "labstk"
+    subnet-name             = "labstk"
+    secnet-name             = "labstk"
+    container_register-name = "labstk"
+    nombre_aks              = "labstk"
+    count_nodos             = 2
+    max_pods                = 30
+    os_disk_size_gb         = 30
+    resource_group_name     = module.ResourceGroup.rg_name_out
+    location                = module.ResourceGroup.rg_location_out     
+}
+

@@ -13,28 +13,38 @@ variable "virtual_network-name" {
   description   = "Name of the resource group"
 }
 
-variable "location" {
+variable "subnet-name" {
   type          = string
   description   = "The location for the deployment"
 }
 
-variable "resource_group_name" {
+variable "secnet-name" {
   type          = string
   description   = "Name of the resource group"
 }
 
-variable "location" {
+variable "container_register-name" {
   type          = string
   description   = "The location for the deployment"
 }
 
-variable "resource_group_name" {
+variable "nombre_aks" {
   type          = string
   description   = "Name of the resource group"
 }
 
-variable "location" {
-  type          = string
+variable "count_nodos" {
+  type          = number
+  description   = "The location for the deployment"
+}
+
+variable "os_disk_size_gb" {
+  type          = number
+  description   = "The location for the deployment"
+}
+
+variable "max_pods" {
+  type          = number
   description   = "The location for the deployment"
 }
 
